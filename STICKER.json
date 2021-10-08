@@ -1,0 +1,39 @@
+{
+  "update_id": 166770024,
+  "message": {
+    "message_id": 501,
+    "from": {
+      "id": 1821266651,
+      "is_bot": false,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 1821266651,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "type": "private"
+    },
+    "date": 1633700734,
+    "sticker": {
+      "width": 512,
+      "height": 512,
+      "emoji": "😡",
+      "set_name": "Worms",
+      "is_animated": true,
+      "thumb": {
+        "file_id": "AAMCAgADGQEAAgH1YWBLfloY6qx_qlerhO0iEVaFbvIAAkwAAw220hn2W__B_te8mwEAB20AAyEE",
+        "file_unique_id": "AQADTAADDbbSGXI",
+        "file_size": 5460,
+        "width": 128,
+        "height": 128
+      },
+      "file_id": "CAACAgIAAxkBAAIB9WFgS35aGOqsf6pXq4TtIhFWhW7yAAJMAAMNttIZ9lv_wf7XvJshBA",
+      "file_unique_id": "AgADTAADDbbSGQ",
+      "file_size": 27092
+    }
+  }
+}
