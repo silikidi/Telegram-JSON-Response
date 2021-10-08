@@ -1,0 +1,54 @@
+{
+  "update_id": 166770021,
+  "message": {
+    "message_id": 493,
+    "from": {
+      "id": 1831579451,
+      "is_bot": false,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabatinfo",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 1831579451,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabatinfo",
+      "type": "private"
+    },
+    "date": 1633699469,
+    "animation": {
+      "file_name": "GIF-ANIMATED.gif.mp4",
+      "mime_type": "video/mp4",
+      "duration": 1,
+      "width": 116,
+      "height": 54,
+      "thumb": {
+        "file_id": "AAMCBQADGQEAAgHtYWBGd69ztBfv1GiDFmQx2ybP2QEAAk8DAAKn3QFXln5CCBU79z8BAAdtAAMhBA",
+        "file_unique_id": "AQADTwMAAqfdAVdy",
+        "file_size": 2326,
+        "width": 116,
+        "height": 53
+      },
+      "file_id": "CgACAgUAAxkBAAIB7WFgRnevc7QX79RogxZkMdsmz9kBAAJPAwACp90BV5Z-QggVO_c_IQQ",
+      "file_unique_id": "AgADTwMAAqfdAVc",
+      "file_size": 11700
+    },
+    "document": {
+      "file_name": "GIF-ANIMATED.gif.mp4",
+      "mime_type": "video/mp4",
+      "thumb": {
+        "file_id": "AAMCBQADGQEAAgHtYWBGd69ztBfv1GiDFmQx2ybP2QEAAk8DAAKn3QFXln5CCBU79z8BAAdtAAMhBA",
+        "file_unique_id": "AQADTwMAAqfdAVdy",
+        "file_size": 2326,
+        "width": 116,
+        "height": 53
+      },
+      "file_id": "CgACAgUAAxkBAAIB7WFgRnevc7QX79RogxZkMdsmz9kBAAJPAwACp90BV5Z-QggVO_c_IQQ",
+      "file_unique_id": "AgADTwMAAqfdAVc",
+      "file_size": 11700
+    },
+    "caption": "Hello world!"
+  }
+}
