@@ -1,0 +1,30 @@
+{
+  "update_id": 166770025,
+  "message": {
+    "message_id": 503,
+    "from": {
+      "id": 1821266651,
+      "is_bot": false,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 1821266651,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "type": "private"
+    },
+    "date": 1633701308,
+    "document": {
+      "file_name": "WAV_1MG.wav",
+      "mime_type": "audio/x-wav",
+      "file_id": "BQACAgUAAxkBAAIB92FgTbyjOxyRFh1QTJEhuB5w9laOAAJSAwACp90BV_q9fSV2XfDNIQQ",
+      "file_unique_id": "AgADUgMAAqfdAVc",
+      "file_size": 1073218
+    },
+    "caption": "Hello world!"
+  }
+}
