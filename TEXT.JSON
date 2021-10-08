@@ -1,0 +1,101 @@
+{
+  "update_id": 166770016,
+  "message": {
+    "message_id": 477,
+    "from": {
+      "id": 1821266651,
+      "is_bot": false,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 1821266651,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "type": "private"
+    },
+    "date": 1633686033,
+    "text": "TELEGRAM BOT SCRIPT\n\n#Bots are third-party applications that run inside Telegram simply created by @BotFather and  It's free $USD but secure.\n\nAuto-detecting for email address do-not-reply@telegram.org, phone number +1-212-555-0123, url https://telegram.org.\n\nText with Bold, Italic, Underline, Strikethrough, Monospace\n\nStarting now with /start@BotFather",
+    "entities": [
+      {
+        "offset": 0,
+        "length": 21,
+        "type": "text_link",
+        "url": "https://telegram-bot-script.blogspot.com/"
+      },
+      {
+        "offset": 21,
+        "length": 5,
+        "type": "hashtag"
+      },
+      {
+        "offset": 99,
+        "length": 10,
+        "type": "mention"
+      },
+      {
+        "offset": 125,
+        "length": 4,
+        "type": "cashtag"
+      },
+      {
+        "offset": 134,
+        "length": 6,
+        "type": "bold"
+      },
+      {
+        "offset": 134,
+        "length": 6,
+        "type": "italic"
+      },
+      {
+        "offset": 176,
+        "length": 25,
+        "type": "email"
+      },
+      {
+        "offset": 216,
+        "length": 15,
+        "type": "phone_number"
+      },
+      {
+        "offset": 237,
+        "length": 20,
+        "type": "url"
+      },
+      {
+        "offset": 270,
+        "length": 4,
+        "type": "bold"
+      },
+      {
+        "offset": 276,
+        "length": 6,
+        "type": "italic"
+      },
+      {
+        "offset": 284,
+        "length": 9,
+        "type": "underline"
+      },
+      {
+        "offset": 295,
+        "length": 13,
+        "type": "strikethrough"
+      },
+      {
+        "offset": 310,
+        "length": 11,
+        "type": "code"
+      },
+      {
+        "offset": 339,
+        "length": 16,
+        "type": "bot_command"
+      }
+    ]
+  }
+}
