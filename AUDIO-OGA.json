@@ -1,0 +1,31 @@
+{
+  "update_id": 166770042,
+  "message": {
+    "message_id": 554,
+    "from": {
+      "id": 1821266651,
+      "is_bot": false,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 1821266651,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "type": "private"
+    },
+    "date": 1633715177,
+    "audio": {
+      "duration": 3,
+      "file_name": "OGA-AUDIO.oga",
+      "mime_type": "audio/x-opus+ogg",
+      "file_id": "CQACAgUAAxkBAAICKmFgg-kQu6jYwboG7UhyzQ9EzEtoAAK_AwACp90JVwQwtd9jNV18IQQ",
+      "file_unique_id": "AgADvwMAAqfdCVc",
+      "file_size": 9602
+    },
+    "caption": "Hello world!"
+  }
+}
