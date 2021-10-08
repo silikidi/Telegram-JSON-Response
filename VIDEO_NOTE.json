@@ -1,0 +1,36 @@
+{
+  "update_id": 166769962,
+  "message": {
+    "message_id": 323,
+    "from": {
+      "id": 1821266651,
+      "is_bot": false,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 1821266651,
+      "first_name": "RSUD CIBABAT",
+      "last_name": "CIMAHI",
+      "username": "rscibabat",
+      "type": "private"
+    },
+    "date": 1633544702,
+    "video_note": {
+      "duration": 4,
+      "length": 384,
+      "thumb": {
+        "file_id": "AAMCBQADGQEAAgFDYV3p_mL3yuJezVMX1uqs0VOQbrsAAh0EAAIXgPFW4HLNu2Qr5TYBAAdtAAMhBA",
+        "file_unique_id": "AQADHQQAAheA8VZy",
+        "file_size": 9469,
+        "width": 320,
+        "height": 320
+      },
+      "file_id": "DQACAgUAAxkBAAIBQ2Fd6f5i98riXs1TF9bqrNFTkG67AAIdBAACF4DxVuByzbtkK-U2IQQ",
+      "file_unique_id": "AgADHQQAAheA8VY",
+      "file_size": 487557
+    }
+  }
+}
