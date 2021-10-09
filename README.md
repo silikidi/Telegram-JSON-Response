@@ -8,7 +8,7 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to show up to Logger.log in Apps Script.
 
-An example script that generates a response back in the form of a JSON message:
+An example script that generates a response back in the form of a JSON message. For more details see [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/a92c9f8e034359e16fa81cf2c52d952fa561907b/Code.gs):
 
 ```
 const telegramAPIToken = "TELEGRAM_API_TOKEN";
@@ -50,5 +50,7 @@ function doPost(e) {
 }
 
 ```
+
+## Screenshot
 
 ![Screenshot](https://blogger.googleusercontent.com/img/a/AVvXsEiC-kbpUbn77o41hH2ZPkOCGX5K6CVVpyWOnVNoF-ZXEfxWqczInNuxZmGWu9Itq0ZwGjTl-0j9bsxwOtxMPoy7TluRcVfqx-V6_omi87HbiHCF7RxiWoxx8ov4rFX3w_vde2qSyPitllZjNPboOiBS5QNOOOZ4JMsUZLY5wYBmnPH2j9ayYv89qQ3GiQ=s0)
