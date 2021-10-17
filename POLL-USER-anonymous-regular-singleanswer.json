@@ -20,18 +20,18 @@
         "date": 1634431524,
         "poll": {
             "id": "6294232395709153296",
-            "question": "Warna favorit anda",
+            "question": "Your favorite color",
             "options": [
                 {
-                    "text": "Red",
+                    "text": "RED",
                     "voter_count": 0
                 },
                 {
-                    "text": "Green",
+                    "text": "GREEN",
                     "voter_count": 0
                 },
                 {
-                    "text": "Blue",
+                    "text": "BLUE",
                     "voter_count": 0
                 }
             ],
