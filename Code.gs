@@ -1,8 +1,32 @@
+/********************************
+* BOT JSON RESPONSE *
+* Put it on Code.gs Apps Script *
+*********************************/
 const telegramAPIToken = "REPLACE_WITH_TELEGRAM_API_TOKEN";
 const telegramAPIURL = "https://api.telegram.org/bot" + telegramAPIToken;
 const telegramAdminID = "REPLACE_WITH_TELEGRAM_USER_ID";
 const googleWebAppsURL = "REPLACE_WITH_GOOGLE_WEB_APPS_URL";
 
+
+/***************************************************************
+* getMe() for requesting about bot *
+* setWebHook() for generating a real time push system with bot *
+****************************************************************/
+function getMe() {
+  var url = telegramAPIURL + "/getMe";
+  var response = UrlFetchApp.fetch( url) ;
+  Logger.log( response.getContentText() );
+}
+function setWebhook() {
+  var url = telegramAPIURL + "/setWebhook?url=" + googleWebAppsURL;
+  var response = UrlFetchApp.fetch( url );
+  Logger.log( response.getContentText() );
+}
+
+
+/********************
+* SENDING A MESSAGE *
+*********************/
 function sendMessage( targetID, message ) {
   var dataMessage = {
     method: "post",
@@ -15,6 +39,10 @@ function sendMessage( targetID, message ) {
   UrlFetchApp.fetch( telegramAPIURL + "/", dataMessage );   
 }
 
+
+/************
+* FILE INFO *
+*************/
 function getFileInfo( chatID, fileID, fileTYPE, fileMIME ) {
   
   /************************************************************
@@ -63,23 +91,69 @@ function getFileInfo( chatID, fileID, fileTYPE, fileMIME ) {
 }
 
 
+/*****************************************
+* CAPTURING JSON POSTS FROM TELEGRAM API *
+******************************************/
 function doPost(e) {
 
-  var data = JSON.parse(e.postData.contents);
-  var chatid = data.message.chat.id;
+  var data = JSON.parse( e.postData.contents );
 
   try {
     
-    if ( chatid ) {
+    if ( data.message ) {
       
-      /**********************
-      * Send JSON structure *
-      ***********************/
-      sendMessage( chatid, JSON.stringify( data, null, 4 ) );
+      var chatid = data.message.chat.id;
 
-      /*********************
-      * Object wrap filter *
-      **********************/
+      if ( data.message.text && data.message.text.substring(0,5) === "/poll" && /^\d+$/.test( data.message.text.substring(5,8) ) ) {
+        
+        var chattext = data.message.text;
+        var pollAnonymous = ["true","false"];
+        var pollType = ["regular","quiz"];
+        var pollMultiple = ["false","true"];
+        var now = new Date();
+
+        var dataPoll = {
+          method: "post",
+          payload: {
+            method: "sendPoll",
+            chat_id: String( chatid ),
+            question: "Your favorite color",
+            options: JSON.stringify(["RED","GREEN","BLUE"]),
+            is_anonymous: pollAnonymous[ chattext.substring(5,6) ],
+            type: pollType[ chattext.substring(6,7) ],
+            allows_multiple_answers: pollMultiple[ chattext.substring(7,8) ],
+            correct_option_id: "2",
+            explanation: "Because blue is the color of Telegram.",
+            close_date: String( now )
+          }
+        };
+
+        UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll ); 
+
+      } else {
+
+        /**********************
+        * SEND JSON STRUCTURE *
+        ***********************/
+        var dataJSON = {
+          method: "post",
+          payload: {
+            method: "sendMessage",
+            chat_id: String( chatid ),
+            text: JSON.stringify( data, null, 4 )
+          }
+        };
+        
+        UrlFetchApp.fetch(telegramAPIURL + "/", dataJSON);
+
+      }
+
+
+      /**********************************************
+      * OBJECT WRAP TEST *
+      * https://stackoverflow.com/a/41532415/12682081
+      ***********************************************/
+
       if ( (( data || {} ).message || {}).document ){
         
         var fileINFO =  getFileInfo( chatid, data.message.document.file_id, "document", data.message.document.mime_type );
@@ -118,24 +192,48 @@ function doPost(e) {
 
       }
       
+      /*********************************************
+      * SEND ADDITIONAL INFORMATION ABOUT THE FILE *
+      **********************************************/
       if ( fileINFO ) {
         
-        var fileURL = fileINFO.mime !== "N/A" ? "https://api.telegram.org/file/bot" + telegramAPIToken + "/" + String( fileINFO.path ) : fileINFO.path;
+        var fileURL = fileINFO.mime !== "N/A" ? "https://api.telegram.org/file/bot" + telegramAPIToken + "/" + String(fileINFO.path) : fileINFO.path;
         
-        /***************************
-        * Send the file's attributes
-        ****************************/
-        sendMessage(
-          chatid,
-          "FILE NAME: " + "<b>" + fileINFO.file + "</b>" + "\n"
-          + "TYPE: " + "<b>" + fileINFO.type + "</b>" + "\n"
-          + "MIME: " + "<b>" + fileINFO.mime + "</b>" + "\n"
-          + "URL: " + fileURL
-        );
+        var dataFile = {
+          method: "post",
+          payload: {
+            method: "sendMessage",
+            chat_id: String( chatid ),
+            parse_mode: "HTML",
+            text: 
+              "FILE NAME: " + "<b>" + fileINFO.file + "</b>" + "\n"
+              + "TYPE: " + "<b>" + fileINFO.type + "</b>" + "\n"
+              + "MIME: " + "<b>" + fileINFO.mime + "</b>" + "\n"
+              + "URL: " + fileURL
+          }
+        };
+        UrlFetchApp.fetch(telegramAPIURL + "/", dataFile); 
         
       }
 
-    } else sendMessage( chatid, "chat_id not found in JSON post." );
+
+    } else {
+
+      /***********************************************************
+      * SEND JSON STRUCTURE FOR NON-MESSAGE POSTS *
+      * ESPECIALLY THOSE THAT DON'T INCLUDE THE CHAT_ID PROPERTY *
+      ************************************************************/
+      var dataJSON = {
+        method: "post",
+        payload: {
+          method: "sendMessage",
+          chat_id: String( telegramAdminID ),
+          text: JSON.stringify( data, null, 4 )
+        }
+      };
+      UrlFetchApp.fetch( telegramAPIURL + "/", dataJSON );
+
+    }
   
   } catch(e) { sendMessage( telegramAdminID, e ); }
 
