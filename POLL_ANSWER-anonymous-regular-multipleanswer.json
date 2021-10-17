@@ -1,0 +1,26 @@
+{
+    "update_id": 603402446,
+    "poll": {
+        "id": "6296484195522838542",
+        "question": "Your favorite color",
+        "options": [
+            {
+                "text": "RED",
+                "voter_count": 0
+            },
+            {
+                "text": "GREEN",
+                "voter_count": 1
+            },
+            {
+                "text": "BLUE",
+                "voter_count": 1
+            }
+        ],
+        "total_voter_count": 1,
+        "is_closed": false,
+        "is_anonymous": true,
+        "type": "regular",
+        "allows_multiple_answers": true
+    }
+}
