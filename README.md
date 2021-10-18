@@ -6,54 +6,43 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 [Telegram Bot API](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script)
 
+More details of the script can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/a13f1dd56dd625f1656f3eb0523efee9bbb5bd3d/Code.gs)
+
 Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to show up to Logger.log in Apps Script.
 
-An example script that generates a response back in the form of a JSON message, for details see [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/ace7092314f35a8ad3badcc7abcc1ee7f304994b/Code.gs):
+## Poll Handling
+
+JSON response from a Poll can only be captured when the Poll is created by the user. The JSON response from the Poll answer itself cannot be captured, but instead sent to the User who created it.
+
+The JSON response from Poll answer can only be captured if the Poll is created by the Bot with the sendPoll method. The JSON response from the Poll itself cannot be captured.
+
+Sample script of sending Poll with sendPoll method:
 
 ```
-const telegramAPIToken = "TELEGRAM_API_TOKEN";
-const telegramAPIURL = "https://api.telegram.org/bot" + telegramAPIToken;
-const telegramAdminID = "TELEGRAM_USER_ID";
-const googleWebAppsURL = "GOOGLE_WEB_APPS_URL";
+var now = new Date();
 
-function doPost(e) {
-  
-  var data = JSON.parse(e.postData.contents);
-  var chatid = data.message.chat.id;
-  
-  try {
-    
-    var dataJSON = {
-      method: "post",
-      payload: {
-        method: "sendMessage",
-        chat_id: String( chatid ),
-        text: JSON.stringify( data, null, 4 )
-      }
-    };
-    UrlFetchApp.fetch(telegramAPIURL + "/", dataJSON);
-      
-  } catch(e) {
-    
-    var dataError = {
-      method: "post",
-      payload: {
-        method: "sendMessage",
-        chat_id: String( telegramAdminID ),
-        text: String( e )
-      }
-    };
-    UrlFetchApp.fetch(telegramAPIURL + "/", dataError);
-    
+var dataPoll = {
+  method: "post",
+  payload: {
+    method: "sendPoll",
+    chat_id: String( chatid ),
+    question: "Your favorite color",
+    options: JSON.stringify( [ "RED", "GREEN", "BLUE" ] ),
+    is_anonymous: "false",
+    type: "regular",
+    allows_multiple_answers: "false",
+    correct_option_id: "2",
+    explanation: "Because blue is the color of Telegram.",
+    close_date: String( now )
   }
-  
-}
+};
 
+UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
 ```
 
 ## Sample Bot
 
-**Bot Respon JSON** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
+**JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
 
 ## Screenshot
 
