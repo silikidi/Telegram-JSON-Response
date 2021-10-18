@@ -1,0 +1,41 @@
+{
+    "update_id": 603402456,
+    "poll": {
+        "id": "6296576545909637136",
+        "question": "Your favorite color",
+        "options": [
+            {
+                "text": "RED",
+                "voter_count": 0
+            },
+            {
+                "text": "GREEN",
+                "voter_count": 1
+            },
+            {
+                "text": "BLUE",
+                "voter_count": 0
+            }
+        ],
+        "total_voter_count": 1,
+        "is_closed": false,
+        "is_anonymous": true,
+        "type": "quiz",
+        "allows_multiple_answers": false,
+        "correct_option_id": 2,
+        "explanation": "Because BLUE is the color of Telegram.",
+        "explanation_entities": [
+            {
+                "offset": 8,
+                "length": 4,
+                "type": "bold"
+            },
+            {
+                "offset": 29,
+                "length": 8,
+                "type": "text_link",
+                "url": "https://telegram.org/"
+            }
+        ]
+    }
+}
