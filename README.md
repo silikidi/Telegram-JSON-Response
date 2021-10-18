@@ -4,7 +4,7 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 ## Generator
 
-[Telegram Bot API](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script)
+[Telegram Bot API v5.3](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script)
 
 More details of the script can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/a13f1dd56dd625f1656f3eb0523efee9bbb5bd3d/Code.gs)
 
