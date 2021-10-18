@@ -1,0 +1,60 @@
+{
+    "update_id": 603402463,
+    "message": {
+        "message_id": 156,
+        "from": {
+            "id": 1650121229,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 1650121229,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "type": "private"
+        },
+        "date": 1634525717,
+        "poll": {
+            "id": "6298828345723322379",
+            "question": "Your favorite color",
+            "options": [
+                {
+                    "text": "RED",
+                    "voter_count": 0
+                },
+                {
+                    "text": "GREEN",
+                    "voter_count": 0
+                },
+                {
+                    "text": "BLUE",
+                    "voter_count": 0
+                }
+            ],
+            "total_voter_count": 0,
+            "is_closed": false,
+            "is_anonymous": true,
+            "type": "quiz",
+            "allows_multiple_answers": false,
+            "correct_option_id": 2,
+            "explanation": "Because BLUE is the color of Telegram.",
+            "explanation_entities": [
+                {
+                    "offset": 8,
+                    "length": 4,
+                    "type": "bold"
+                },
+                {
+                    "offset": 29,
+                    "length": 8,
+                    "type": "text_link",
+                    "url": "https://telegram.org/"
+                }
+            ]
+        }
+    }
+}
