@@ -8,7 +8,9 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 More details of the script can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/a13f1dd56dd625f1656f3eb0523efee9bbb5bd3d/Code.gs)
 
-Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to show up to Logger.log in Apps Script.
+Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to show up to [Logger.log](https://developers.google.com/apps-script/reference/base/logger) in Apps Script.
+
+You can even more simplify the script with [ES6 notation](https://scotch.io/bar-talk/five-things-you-can-use-in-es6-today).
 
 ## Poll Handling
 
@@ -20,6 +22,7 @@ Example of the [sendPoll](https://core.telegram.org/bots/api#sendpoll) method wi
 
 ```
 var now = new Date();
+now.setHours( now.getHours() + 1 );
 
 var dataPoll = {
   method: "post",
@@ -32,8 +35,11 @@ var dataPoll = {
     type: "regular",
     allows_multiple_answers: "false",
     correct_option_id: "2",
-    explanation: "Because blue is the color of Telegram.",
-    close_date: String( now )
+    explanation: "Because <b>BLUE</b> is the color of <a href='https://telegram.org'>Telegram</a>.",
+    explanation_parse_mode: "HTML",
+    close_date: String( now.getTime() )
+    //in case need more complicated...
+    //close_date: String( Utilities.formatDate( now, Session.getScriptTimeZone(), "yyyy-MM-dd'T'HH:mm:ss'Z'" ) )
   }
 };
 
@@ -44,6 +50,8 @@ UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
 
 **JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
 
-## Screenshot
+**Powered by** [**Code.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/04b37297d268f9c1af87c6913960410f8378b52b/Code.gs)
+
+### Screenshot
 
 ![Screenshot](https://blogger.googleusercontent.com/img/a/AVvXsEjqR5r9uI5VdozdnIqz6HaYPRBkWQFBkpTyfXmAWQ-ptDbFliRBZF66Wt7FIz6IkfPSois7pxC7rYJSLGTEMYAwSPDwyx7TnxupHGgYw_fQV6vJTI8NLkPpw0oMu0NkCZhlQmcQh3WWORgIFxfg39kf7F0MXivGtvsdST1wl1OrfToSIiZoqhou7tZatQ=s0)
