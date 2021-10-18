@@ -46,6 +46,21 @@ var dataPoll = {
 UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
 ```
 
+Make sure you add poll commands to the bot to generate a test poll created by Bot:
+
+**start** - _Command test_  
+**poll000** - _Poll anonymous regular single answer_  
+**poll001** - _Poll anonymous regular multiple answer_  
+**poll010** - _Poll anonymous quiz single answer_  
+**poll011** - _Poll anonymous quiz multiple answer_  
+**poll100** - _Poll non anonymous regular single answer_  
+**poll101** - _Poll non anonymous regular multiple answer_  
+**poll110** - _Poll non anonymous quiz single answer_  
+**poll111** - _Poll non anonymous quiz multiple answer_
+
+
+![Poll command](https://blogger.googleusercontent.com/img/a/AVvXsEgeT29j3y02DQOr446_iNlt3mz2v7uxINno9A_gcugluLeWfQ5lVPaDnxVNWkVrPJoVmA23RS9c8UR7Dy5uufqKN1zsywFmPf-XiTXefu4ec1iCaOD6-7Rs33uc5qLOjMSUigil2ArTExPk5gcUrgEGwelGghbIY0WqZDr5Xq1Xx6BhifrwJM5ZIDv-EQ=s0)
+
 ## Sample Bot
 
 **JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
