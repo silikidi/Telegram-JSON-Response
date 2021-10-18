@@ -14,9 +14,9 @@ Each JSON response from the Telegram Bot API will be sent back by Google Apps Sc
 
 JSON response from a Poll can only be captured when the Poll is created by the user. The JSON response from the Poll answer itself cannot be captured, but instead sent to the User who created it.
 
-The JSON response from Poll answer can only be captured if the Poll is created by the Bot with the (sendPoll)[https://core.telegram.org/bots/api#sendpoll] method. The JSON response from the Poll itself cannot be captured.
+The JSON response from [Poll answer](https://core.telegram.org/bots/api#pollanswer) can only be captured if the Poll is created by the Bot with the sendPoll method. The JSON response from the Poll itself cannot be captured.
 
-Sample script of sending Poll with sendPoll method:
+Example of the [sendPoll](https://core.telegram.org/bots/api#sendpoll) method with [options](https://core.telegram.org/bots/api#polloption) property in a Array of String of JSON-serialized list of answer 2-10 strings 1-100 characters each:
 
 ```
 var now = new Date();
