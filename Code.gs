@@ -111,6 +111,7 @@ function doPost(e) {
         var pollType = ["regular","quiz"];
         var pollMultiple = ["false","true"];
         var now = new Date();
+        now.setHours( now.getHours() + 1 );
 
         var dataPoll = {
           method: "post",
@@ -123,8 +124,11 @@ function doPost(e) {
             type: pollType[ chattext.substring(6,7) ],
             allows_multiple_answers: pollMultiple[ chattext.substring(7,8) ],
             correct_option_id: "2",
-            explanation: "Because blue is the color of Telegram.",
-            close_date: String( now )
+            explanation: "Because <b>BLUE</b> is the color of <a href='https://telegram.org'>Telegram</a>.",
+            explanation_parse_mode: "HTML",
+            close_date: String( now.getTime() )
+            //in case need more complicated...
+            //close_date: String( Utilities.formatDate( now, Session.getScriptTimeZone(), "yyyy-MM-dd'T'HH:mm:ss'Z'" ) )
           }
         };
 
