@@ -1,0 +1,18 @@
+{
+    "update_id": 603402460,
+    "poll_answer": {
+        "poll_id": "6298828345723322376",
+        "user": {
+            "id": 1650121229,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "option_ids": [
+            1,
+            2
+        ]
+    }
+}
