@@ -6,7 +6,7 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 [Telegram Bot API v5.3](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script)
 
-More details of the script can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/6a847bc73598467a04c18a87f5fc4fbd86372aeb/Code.gs)
+More details of the script can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
 
 Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to show up to [Logger.log](https://developers.google.com/apps-script/reference/base/logger) in Apps Script.
 
@@ -65,7 +65,7 @@ Make sure you add poll commands to the bot to generate a test poll created by Bo
 
 **JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
 
-**Powered by** [**Code.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/6a847bc73598467a04c18a87f5fc4fbd86372aeb/Code.gs)
+**Powered by** [**Code.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
 
 ### Screenshot
 
