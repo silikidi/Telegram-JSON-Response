@@ -118,9 +118,9 @@ function doPost(e) {
       if ( data.message.text && data.message.text.substring(0,5) === "/poll" && /^\d+$/.test( data.message.text.substring(5,8) ) ) {
         
         var chattext = data.message.text;
-        var pollAnonymous = [ "true", "false" ];
-        var pollType = [ "regular", "quiz" ];
-        var pollMultiple = [ "false", "true" ];
+        var pollAnonymous = ["true","false"];
+        var pollType = ["regular","quiz"];
+        var pollMultiple = ["false","true"];
         var now = new Date();
         now.setHours( now.getHours() + 1 );
 
@@ -129,8 +129,8 @@ function doPost(e) {
           payload: {
             method: "sendPoll",
             chat_id: String( chatid ),
-            question: "Your favorite color",
-            options: JSON.stringify( [ "RED", "GREEN", "BLUE" ] ),
+            question: "[" + chatid + "] Your favorite color",
+            options: JSON.stringify(["RED","GREEN","BLUE"]),
             is_anonymous: pollAnonymous[ chattext.substring(5,6) ],
             type: pollType[ chattext.substring(6,7) ],
             allows_multiple_answers: pollMultiple[ chattext.substring(7,8) ],
@@ -142,7 +142,8 @@ function doPost(e) {
             //close_date: String( Utilities.formatDate( now, Session.getScriptTimeZone(), "yyyy-MM-dd'T'HH:mm:ss'Z'" ) )
           }
         };
-        UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll ); 
+
+        UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
 
       } else {
 
@@ -157,7 +158,8 @@ function doPost(e) {
             text: JSON.stringify( data, null, 4 )
           }
         };
-        UrlFetchApp.fetch( telegramAPIURL + "/", dataJSON );
+        
+        UrlFetchApp.fetch(telegramAPIURL + "/", dataJSON);
 
       }
 
@@ -210,7 +212,7 @@ function doPost(e) {
       **********************************************/
       if ( fileINFO ) {
         
-        var fileURL = fileINFO.mime !== "N/A" ? "https://api.telegram.org/file/bot" + telegramAPIToken + "/" + String( fileINFO.path ) : fileINFO.path;
+        var fileURL = fileINFO.mime !== "N/A" ? "https://api.telegram.org/file/bot" + telegramAPIToken + "/" + String(fileINFO.path) : fileINFO.path;
         
         var dataFile = {
           method: "post",
@@ -225,7 +227,7 @@ function doPost(e) {
               + "URL: " + fileURL
           }
         };
-        UrlFetchApp.fetch( telegramAPIURL + "/", dataFile ); 
+        UrlFetchApp.fetch(telegramAPIURL + "/", dataFile); 
         
       }
 
@@ -236,11 +238,23 @@ function doPost(e) {
       * SEND JSON STRUCTURE FOR NON-MESSAGE POSTS *
       * ESPECIALLY THOSE THAT DON'T INCLUDE THE CHAT_ID PROPERTY *
       ************************************************************/
+      var destinationID = telegramAdminID;
+
+      if ( ( data || {} ).poll ) {
+        
+        destinationID = ( data.poll.question ).match(/\[(.*)\]/).pop();
+
+      } else if ( ( data || {} ).poll_answer ) {
+        
+        destinationID = data.poll_answer.user.id;
+
+      }
+
       var dataJSON = {
         method: "post",
         payload: {
           method: "sendMessage",
-          chat_id: String( telegramAdminID ),
+          chat_id: String( destinationID ),
           text: JSON.stringify( data, null, 4 )
         }
       };
@@ -248,6 +262,6 @@ function doPost(e) {
 
     }
   
-  } catch(e) { sendMessage( telegramAdminID, e ); }
+  } catch(e) { kirimPesan( telegramAdminID, e ); }
 
 }
