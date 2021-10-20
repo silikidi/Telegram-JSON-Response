@@ -25,7 +25,7 @@ const googleWebAppsURL = "REPLACE_WITH_GOOGLE_WEB_APPS_URL";
 ****************************************************************/
 function getMe() {
   var url = telegramAPIURL + "/getMe";
-  var response = UrlFetchApp.fetch( url) ;
+  var response = UrlFetchApp.fetch( url ) ;
   Logger.log( response.getContentText() );
 }
 function setWebhook() {
@@ -159,7 +159,7 @@ function doPost(e) {
           }
         };
         
-        UrlFetchApp.fetch(telegramAPIURL + "/", dataJSON);
+        UrlFetchApp.fetch( telegramAPIURL + "/", dataJSON );
 
       }
 
