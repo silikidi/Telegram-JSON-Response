@@ -61,6 +61,10 @@ Make sure you add poll commands to the bot to generate a test poll created by Bo
 
 ![Poll command](https://blogger.googleusercontent.com/img/a/AVvXsEgeT29j3y02DQOr446_iNlt3mz2v7uxINno9A_gcugluLeWfQ5lVPaDnxVNWkVrPJoVmA23RS9c8UR7Dy5uufqKN1zsywFmPf-XiTXefu4ec1iCaOD6-7Rs33uc5qLOjMSUigil2ArTExPk5gcUrgEGwelGghbIY0WqZDr5Xq1Xx6BhifrwJM5ZIDv-EQ=s0)
 
+## Poll Answer Handling
+
+More details see [POLL_JSON_Handler_Script.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/main/POLL_JSON_Handler_Script.gs)
+
 ## Sample Bot
 
 **JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
