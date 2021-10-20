@@ -67,9 +67,7 @@ More details see [**POLL_JSON_Handler_Script.gs**](https://github.com/silikidi/T
 
 ## Sample Bot
 
-**JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot)
-
-**Powered by** [**Code.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
+**JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot) powered by [**Code.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
 
 ### Screenshot
 
