@@ -46,7 +46,7 @@ var dataPoll = {
 UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
 ```
 
-Make sure you add poll commands to the bot to generate a test poll created by Bot:
+Make sure you add poll commands to the bot with [**@BotFather**](https://t.me/BotFather) to generate a test poll created by Bot:
 
 **start** - _Command test_  
 **poll000** - _Poll anonymous regular single answer_  
