@@ -1,12 +1,6 @@
 /************************************************************
 * TELEGRAM POLL ANSWER JSON HANDLER WITH GOOGLE APPS SCRIPT *
-* Put it on Code.gs or whatever .gs you wish in Apps Script *
 *************************************************************/
-const pollAnonymous = ["true","false"];
-const pollType = ["regular","quiz"];
-const pollMultiple = ["false","true"];
-const pollOptions = [ "RED", "GREEN", "BLUE" ];
-//const pollCorrectAnswer = 2; //BLUE
 
 /***************************
 * JSON POLL ANSWER SAMPLES *
