@@ -2,6 +2,7 @@
 * TELEGRAM POLL ANSWER JSON HANDLER WITH GOOGLE APPS SCRIPT *
 *************************************************************/
 
+
 /***************************
 * JSON POLL ANSWER SAMPLES *
 ****************************/
