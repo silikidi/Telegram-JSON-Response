@@ -227,7 +227,7 @@ function doPost(e) {
               + "URL: " + fileURL
           }
         };
-        UrlFetchApp.fetch(telegramAPIURL + "/", dataFile); 
+        UrlFetchApp.fetch( telegramAPIURL + "/", dataFile ); 
         
       }
 
@@ -238,15 +238,15 @@ function doPost(e) {
       * SEND JSON STRUCTURE FOR NON-MESSAGE POSTS *
       * ESPECIALLY THOSE THAT DON'T INCLUDE THE CHAT_ID PROPERTY *
       ************************************************************/
-      var destinationID = telegramAdminID;
+      var destinationID = telegramAdminID ;
 
       if ( ( data || {} ).poll ) {
         
-        destinationID = ( data.poll.question ).match(/\[(.*)\]/).pop();
+        var destinationID = ( data.poll.question ).match(/\[(.*)\]/).pop();
 
       } else if ( ( data || {} ).poll_answer ) {
         
-        destinationID = data.poll_answer.user.id;
+        var destinationID = data.poll_answer.user.id;
 
       }
 
@@ -262,6 +262,6 @@ function doPost(e) {
 
     }
   
-  } catch(e) { kirimPesan( telegramAdminID, e ); }
+  } catch(e) { sendMessage( telegramAdminID, e ); }
 
 }
