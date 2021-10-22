@@ -12,11 +12,11 @@ You can even more simplify the script with [ES6 notation](https://scotch.io/bar-
 
 ## Media Group
 
-The JSON's media group is sent separately for each object. If in one media group there is one video, two images, and a caption text, it will be sent in four JSON modules of text, video, and two photos.
+The JSON's media group is sent separately for each object. If in one media group there is one video, two images, and a caption text, it will be sent in four JSON modules of text, video, and two photos with the same **media_group_id**.
 
 ## Poll Handling
 
-JSON response from a Poll can only be captured when the Poll is created by the user. The JSON response from the Poll answer itself cannot be captured, but instead sent to the User who created it.
+JSON response from a Poll can only be captured when the Poll is created by the user. The JSON response from the Poll answer itself cannot be captured, but instead sent to the user who created it.
 
 The JSON response from [Poll answer](https://core.telegram.org/bots/api#pollanswer) can only be captured if the Poll is created by the Bot with the sendPoll method. The JSON response from the Poll itself cannot be captured.
 
@@ -24,10 +24,10 @@ Example of the [sendPoll](https://core.telegram.org/bots/api#sendpoll) method wi
 
 ```
 
-var now = new Date();
+let now = new Date();
 now.setHours( now.getHours() + 1 );
 
-var dataPoll = {
+let dataPoll = {
   method: "post",
   payload: {
     method: "sendPoll",
@@ -41,8 +41,10 @@ var dataPoll = {
     explanation: "Because <b>BLUE</b> is the color of <a href='https://telegram.org'>Telegram</a>.",
     explanation_parse_mode: "HTML",
     close_date: String( now.getTime() )
+    
     //in case need more complicated...
     //close_date: String( Utilities.formatDate( now, Session.getScriptTimeZone(), "yyyy-MM-dd'T'HH:mm:ss'Z'" ) )
+    
   }
 };
 
