@@ -1,0 +1,53 @@
+{
+    "update_id": 603402580,
+    "message": {
+        "message_id": 347,
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 1831579451,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "type": "private"
+        },
+        "date": 1634897723,
+        "media_group_id": "13079181783925741",
+        "photo": [
+            {
+                "file_id": "AgACAgUAAxkBAAIBW2FyjzqCRfMCpd6ld6_tFdjhhRBNAALwrjEbtoyRV2F6fyhnRkaJAQADAgADcwADIQQ",
+                "file_unique_id": "AQAD8K4xG7aMkVd4",
+                "file_size": 2092,
+                "width": 90,
+                "height": 90
+            },
+            {
+                "file_id": "AgACAgUAAxkBAAIBW2FyjzqCRfMCpd6ld6_tFdjhhRBNAALwrjEbtoyRV2F6fyhnRkaJAQADAgADbQADIQQ",
+                "file_unique_id": "AQAD8K4xG7aMkVdy",
+                "file_size": 27046,
+                "width": 320,
+                "height": 320
+            },
+            {
+                "file_id": "AgACAgUAAxkBAAIBW2FyjzqCRfMCpd6ld6_tFdjhhRBNAALwrjEbtoyRV2F6fyhnRkaJAQADAgADeAADIQQ",
+                "file_unique_id": "AQAD8K4xG7aMkVd9",
+                "file_size": 107137,
+                "width": 800,
+                "height": 800
+            },
+            {
+                "file_id": "AgACAgUAAxkBAAIBW2FyjzqCRfMCpd6ld6_tFdjhhRBNAALwrjEbtoyRV2F6fyhnRkaJAQADAgADeQADIQQ",
+                "file_unique_id": "AQAD8K4xG7aMkVd-",
+                "file_size": 144400,
+                "width": 1080,
+                "height": 1080
+            }
+        ]
+    }
+}
