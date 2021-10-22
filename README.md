@@ -6,9 +6,9 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 [Telegram Bot API v5.3](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script)
 
-More details of the script can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
+More details can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
 
-Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to show up to [Logger.log](https://developers.google.com/apps-script/reference/base/logger) in Apps Script.
+Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to the Apps Script's [Logger.log](https://developers.google.com/apps-script/reference/base/logger).
 
 You can even more simplify the script with [ES6 notation](https://scotch.io/bar-talk/five-things-you-can-use-in-es6-today).
 
@@ -46,29 +46,27 @@ var dataPoll = {
 UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
 ```
 
-Make sure you add poll commands to the bot with [**@BotFather**](https://t.me/BotFather) to generate a test poll created by Bot:
+Add poll commands with [**@BotFather**](https://t.me/BotFather) to generate a test poll:
 
-**start** - _Command test_  
-**poll000** - _Poll anonymous regular single answer_  
-**poll001** - _Poll anonymous regular multiple answer_  
-**poll010** - _Poll anonymous quiz single answer_  
-**poll011** - _Poll anonymous quiz multiple answer_  
-**poll100** - _Poll non anonymous regular single answer_  
-**poll101** - _Poll non anonymous regular multiple answer_  
-**poll110** - _Poll non anonymous quiz single answer_  
-**poll111** - _Poll non anonymous quiz multiple answer_
+**start** - Command test  
+**poll000** - Poll anonymous regular single answer  
+**poll001** - Poll anonymous regular multiple answer  
+**poll010** - Poll anonymous quiz single answer  
+**poll011** - Poll anonymous quiz multiple answer  
+**poll100** - Poll non anonymous regular single answer  
+**poll101** - Poll non anonymous regular multiple answer  
+**poll110** - Poll non anonymous quiz single answer  
+**poll111** - Poll non anonymous quiz multiple answer
 
 
 ![Poll command](https://blogger.googleusercontent.com/img/a/AVvXsEgeT29j3y02DQOr446_iNlt3mz2v7uxINno9A_gcugluLeWfQ5lVPaDnxVNWkVrPJoVmA23RS9c8UR7Dy5uufqKN1zsywFmPf-XiTXefu4ec1iCaOD6-7Rs33uc5qLOjMSUigil2ArTExPk5gcUrgEGwelGghbIY0WqZDr5Xq1Xx6BhifrwJM5ZIDv-EQ=s0)
 
 ## Poll Answer Handling
 
-More details see [**POLL_JSON_Handler_Script.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/POLL-JSON-Handler-Script.gs)
+More details see [**POLL-JSON-Handler-Script.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/POLL-JSON-Handler-Script.gs)
 
 ## Sample Bot
 
 **JSON Response Bot** [**@simrsjsonbot**](https://t.me/simrsjsonbot) powered by [**Code.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
-
-### Screenshot
 
 ![Screenshot](https://blogger.googleusercontent.com/img/a/AVvXsEjqR5r9uI5VdozdnIqz6HaYPRBkWQFBkpTyfXmAWQ-ptDbFliRBZF66Wt7FIz6IkfPSois7pxC7rYJSLGTEMYAwSPDwyx7TnxupHGgYw_fQV6vJTI8NLkPpw0oMu0NkCZhlQmcQh3WWORgIFxfg39kf7F0MXivGtvsdST1wl1OrfToSIiZoqhou7tZatQ=s0)
