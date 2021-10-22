@@ -1,0 +1,26 @@
+{
+    "update_id": 603402603,
+    "message": {
+        "message_id": 410,
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 1850121251,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "type": "private"
+        },
+        "date": 1634910688,
+        "location": {
+            "latitude": -6.857764,
+            "longitude": 100.319010
+        }
+    }
+}
