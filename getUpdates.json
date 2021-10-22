@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 166770233,
+      "message": {
+        "message_id": 977,
+        "from": {
+          "id": 1850121251,
+          "is_bot": false,
+          "first_name": "JOHN",
+          "last_name": "DOE",
+          "username": "johndoe",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 1850121251,
+          "first_name": "JOHN",
+          "last_name": "DOE",
+          "username": "johndoe",
+          "type": "private"
+        },
+        "date": 1634907081,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 166770235,
+      "message": {
+        "message_id": 979,
+        "from": {
+          "id": 1850121251,
+          "is_bot": false,
+          "first_name": "JOHN",
+          "last_name": "DOE",
+          "username": "johndoe",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 1850121251,
+          "first_name": "JOHN",
+          "last_name": "DOE",
+          "username": "johndoe",
+          "type": "private"
+        },
+        "date": 1634907302,
+        "text": "Hai bot!"
+      }
+    }
+  ]
+}
