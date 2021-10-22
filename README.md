@@ -4,13 +4,15 @@ JSON response samples for Telegram API developers. Based on Bot API 5.3. For det
 
 ## Generator
 
-[Telegram Bot API v5.3](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script)
-
-More details can be found at [Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs)
+[Code.gs](https://github.com/silikidi/Telegram-JSON-Response/blob/main/Code.gs) powered by [Telegram Bot API v5.3](https://core.telegram.org/bots/api) and [Google Apps Script](https://developers.google.com/apps-script).
 
 Each JSON response from the Telegram Bot API will be sent back by Google Apps Script as a message via Google web apps connected to the Telegram webhook. The results appear in the chat bot whenever a user submits certain content. You can change it to the Apps Script's [Logger.log](https://developers.google.com/apps-script/reference/base/logger).
 
 You can even more simplify the script with [ES6 notation](https://scotch.io/bar-talk/five-things-you-can-use-in-es6-today).
+
+## Media Group
+
+The JSON's media group is sent separately for each object. If in one media group there is one video, two images, and a caption text, it will be sent in four JSON modules of text, video, and two photos.
 
 ## Poll Handling
 
@@ -21,6 +23,7 @@ The JSON response from [Poll answer](https://core.telegram.org/bots/api#pollansw
 Example of the [sendPoll](https://core.telegram.org/bots/api#sendpoll) method with [options](https://core.telegram.org/bots/api#polloption) property in a Array of String of JSON-serialized list of answer 2-10 strings 1-100 characters each:
 
 ```
+
 var now = new Date();
 now.setHours( now.getHours() + 1 );
 
@@ -44,6 +47,10 @@ var dataPoll = {
 };
 
 UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
+
+//let response = UrlFetchApp.fetch( telegramAPIURL + "/", dataPoll );
+//Logger.log( response.getContentText() );
+
 ```
 
 Add poll commands with [**@BotFather**](https://t.me/BotFather) to generate a test poll:
@@ -58,6 +65,7 @@ Add poll commands with [**@BotFather**](https://t.me/BotFather) to generate a te
 **poll110** - Poll non anonymous quiz single answer  
 **poll111** - Poll non anonymous quiz multiple answer
 
+Quiz cannot be mixed with Multiple-answer. But here, try **poll011** and **poll111** to see Telegram's priority over these two properties when forced to combine.
 
 ![Poll command](https://blogger.googleusercontent.com/img/a/AVvXsEgeT29j3y02DQOr446_iNlt3mz2v7uxINno9A_gcugluLeWfQ5lVPaDnxVNWkVrPJoVmA23RS9c8UR7Dy5uufqKN1zsywFmPf-XiTXefu4ec1iCaOD6-7Rs33uc5qLOjMSUigil2ArTExPk5gcUrgEGwelGghbIY0WqZDr5Xq1Xx6BhifrwJM5ZIDv-EQ=s0)
 
