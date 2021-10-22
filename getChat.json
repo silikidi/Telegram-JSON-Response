@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "result": {
+    "id": 1850121251,
+    "first_name": "JOHN",
+    "last_name": "DOE",
+    "username": "johndoe",
+    "type": "private",
+    "bio": "G.I. Joe veteran",
+    "photo": {
+      "small_file_id": "AQADBQAD9KwxG4TKoVUACAIAAzuvK20ABKM0zO_yqiwuIQQ",
+      "small_file_unique_id": "AQAD9KwxG4TKoVUAAQ",
+      "big_file_id": "AQADBQAD9KwxG4TKoVUACAMAAzuvK20ABKM0zO_yqiwuIQQ",
+      "big_file_unique_id": "AQAD9KwxG4TKoVUB"
+    }
+  }
+}
