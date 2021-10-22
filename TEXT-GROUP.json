@@ -1,0 +1,29 @@
+{
+    "update_id": 603402578,
+    "message": {
+        "message_id": 344,
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": -713953955,
+            "title": "GROUPME",
+            "type": "group",
+            "all_members_are_administrators": true
+        },
+        "date": 1634896615,
+        "text": "/start@simrsjsonbot",
+        "entities": [
+            {
+                "offset": 0,
+                "length": 19,
+                "type": "bot_command"
+            }
+        ]
+    }
+}
