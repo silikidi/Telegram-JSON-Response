@@ -63,7 +63,7 @@ Make sure you add poll commands to the bot with [**@BotFather**](https://t.me/Bo
 
 ## Poll Answer Handling
 
-More details see [**POLL_JSON_Handler_Script.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/POLL_JSON_Handler_Script.gs)
+More details see [**POLL_JSON_Handler_Script.gs**](https://github.com/silikidi/Telegram-JSON-Response/blob/main/POLL-JSON-Handler-Script.gs)
 
 ## Sample Bot
 
