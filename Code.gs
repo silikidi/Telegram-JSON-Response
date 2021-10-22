@@ -238,8 +238,6 @@ function doPost(e) {
       * SEND JSON STRUCTURE FOR NON-MESSAGE POSTS *
       * ESPECIALLY THOSE THAT DON'T INCLUDE THE CHAT_ID PROPERTY *
       ************************************************************/
-      var destinationID = telegramAdminID ;
-
       if ( ( data || {} ).poll ) {
         
         var destinationID = ( data.poll.question ).match(/\[(.*)\]/).pop();
@@ -247,6 +245,10 @@ function doPost(e) {
       } else if ( ( data || {} ).poll_answer ) {
         
         var destinationID = data.poll_answer.user.id;
+
+      } else {
+        
+        var destinationID = telegramAdminID;
 
       }
 
