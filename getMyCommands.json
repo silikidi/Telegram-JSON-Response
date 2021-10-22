@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "command": "start",
+      "description": "Command test"
+    },
+    {
+      "command": "hello",
+      "description": "Greeting message"
+    },
+    {
+      "command": "about",
+      "description": "About bot"
+    }
+  ]
+}
