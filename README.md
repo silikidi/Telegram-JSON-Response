@@ -65,7 +65,7 @@ Add poll commands with [**@BotFather**](https://t.me/BotFather) to generate a te
 **poll110** - Poll non anonymous quiz single answer  
 **poll111** - Poll non anonymous quiz multiple answer
 
-Quiz cannot be mixed with Multiple-answer. But here, try **poll011** and **poll111** to see Telegram's priority over these two properties when forced to combine.
+Quiz cannot be mixed with Multiple-answer. **poll011** and **poll111** command is used to see Telegram's priority over these two properties when both forced to combine.
 
 ![Poll command](https://blogger.googleusercontent.com/img/a/AVvXsEgeT29j3y02DQOr446_iNlt3mz2v7uxINno9A_gcugluLeWfQ5lVPaDnxVNWkVrPJoVmA23RS9c8UR7Dy5uufqKN1zsywFmPf-XiTXefu4ec1iCaOD6-7Rs33uc5qLOjMSUigil2ArTExPk5gcUrgEGwelGghbIY0WqZDr5Xq1Xx6BhifrwJM5ZIDv-EQ=s0)
 
