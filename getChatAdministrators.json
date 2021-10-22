@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "user": {
+        "id": 1850121251,
+        "is_bot": false,
+        "first_name": "JOHN",
+        "last_name": "DOE",
+        "username": "johndoe",
+        "language_code": "en"
+      },
+      "status": "creator",
+      "is_anonymous": false
+    }
+  ]
+}
