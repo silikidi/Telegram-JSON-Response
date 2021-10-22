@@ -1,0 +1,33 @@
+{
+    "update_id": 603402586,
+    "message": {
+        "message_id": 366,
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 1850121251,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "type": "private"
+        },
+        "date": 1634901746,
+        "media_group_id": "13079213969434453",
+        "audio": {
+            "duration": 27,
+            "file_name": "MP3_1MG.mp3",
+            "mime_type": "audio/mpeg",
+            "title": "Impact Moderato",
+            "performer": "Kevin MacLeod",
+            "file_id": "CQACAgUAAxkBAAIBbmFynvIjqELWd9rjggM04ZBHZuleAAJBAwACtoyZVzAHHAyyf3SDIQQ",
+            "file_unique_id": "AgADQQMAAraMmVc",
+            "file_size": 1087849
+        }
+    }
+}
