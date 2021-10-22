@@ -1,0 +1,35 @@
+{
+    "update_id": 603402611,
+    "message": {
+        "message_id": 421,
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 1850121251,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "type": "private"
+        },
+        "date": 1634910911,
+        "location": {
+            "latitude": -6.880578,
+            "longitude": 107.551563
+        },
+        "venue": {
+            "location": {
+                "latitude": -6.880578,
+                "longitude": 107.551563
+            },
+            "title": "YOGYA Plaza Cimahi",
+            "address": "Jl. Jend. H. Amir Machmud No. 128",
+            "foursquare_id": "4c2c74a617a29c7419c1e212"
+        }
+    }
+}
