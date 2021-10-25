@@ -1,0 +1,24 @@
+{
+    "update_id": 603402630,
+    "message": {
+        "message_id": 107,
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": -1001518512573,
+            "title": "GROUPME",
+            "username": "botgroupie",
+            "type": "supergroup"
+        },
+        "date": 1635183114,
+        "message_auto_delete_timer_changed": {
+            "message_auto_delete_time": 86400
+        }
+    }
+}
