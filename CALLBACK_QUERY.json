@@ -1,0 +1,52 @@
+{
+    "update_id": 420112307,
+    "callback_query": {
+        "id": "7866573844579717058",
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "message": {
+            "message_id": 391,
+            "from": {
+                "id": 202666666207,
+                "is_bot": true,
+                "first_name": "FORM BOT",
+                "username": "simrsformbot"
+            },
+            "chat": {
+                "id": 1850121251,
+                "first_name": "JOHN",
+                "last_name": "DOE",
+                "username": "johndoe",
+                "type": "private"
+            },
+            "date": 1635743365,
+            "text": "Demo inlinekeyboards_3",
+            "reply_markup": {
+                "inline_keyboard": [
+                    [
+                        {
+                            "text": "👆 EMPTY",
+                            "callback_data": "emptyness"
+                        },
+                        {
+                            "text": "🤘 CALLBACK_DATA",
+                            "callback_data": "Hello world!"
+                        },
+                        {
+                            "text": "🤟 URL",
+                            "url": "https://telegram-bot-script.blogspot.com/"
+                        }
+                    ]
+                ]
+            }
+        },
+        "chat_instance": "7721309288641021086",
+        "data": "Hello world!"
+    }
+}
