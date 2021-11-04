@@ -1,0 +1,17 @@
+{
+    "update_id": 420112440,
+    "inline_query": {
+        "id": "7866573845116548286",
+        "from": {
+            "id": 1850121251,
+            "is_bot": false,
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "username": "johndoe",
+            "language_code": "en"
+        },
+        "chat_type": "supergroup",
+        "query": "Java Coffee",
+        "offset": ""
+    }
+}
